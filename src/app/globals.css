@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6a737d;
+}
+
+.token.punctuation {
+    color: #e1e4e8;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #79b8ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #85e89d;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #b392f0;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #f97583;
+}
+
+.token.function,
+.token.class-name {
+    color: #b392f0;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #ffab70;
+}
+
+:root {
+    --background: #0a0a0a;
+    --foreground: #e4e4e7;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+::selection {
+    background-color: rgba(34, 197, 94, 0.3);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #18181b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #52525b;
+}
+
+@layer utilities {
+    .text-ghost {
+        color: #52525b;
+    }
+
+    .text-correct {
+        color: #22c55e;
+    }
+
+    .text-error {
+        color: #ef4444;
+        background-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .cursor-blink {
+        animation: blink 1s step-end infinite;
+    }
+}
+
+.prism-code {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: 'JetBrains Mono', monospace !important;
+    background: transparent !important;
+}
